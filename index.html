@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ASM1</title>
+        <style>
+            #header{
+                background: #ffffff;
+                box-sizing: border-box;
+                display: block;
+            }
+            .topbar{
+                font-size: 100%;
+                outline: 0;
+                padding: 0;
+                vertical-align: baseline;
+            }
+            .topbar img{
+                display: block;
+                width: 100%;
+                z-index: 1;
+                position: relative;
+                box-sizing: border-box;
+            }
+            .container{
+                font-size: 100%;
+                width: 95%;
+                outline: 0;
+                padding: 0;
+                vertical-align: baseline;
+                display: block;
+                padding-right: 10px;
+                padding-left: 10px;
+                margin-right: 50px;
+                margin-left: 50px;
+                
+            }
+            .headerlogo img{
+                height: 60px;
+                border: none;
+                vertical-align: middle;
+                box-sizing: border-box;
+                flex: 0 0 220px;
+                max-width: 220px;
+                text-align: center;
+
+            }
+            .danhmuc{
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+            .row1{
+                flex: 0 0 250px;
+                background: #;
+                position: relative;
+            }
+            .box1{
+                padding: 0;
+                justify-content: center;
+                width: 100%;
+                color: white;
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+                background: #505050;
+                border-radius: 4px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+            }
+            .fa{
+                font: normal normal normal 14px;
+                text-rendering: auto;
+                display: inline-block;
+                font-family: 'FontAwesome'!important;
+            }
+            .a2{
+                float: left;
+                list-style-type: none;
+                margin-left: 22px;
+                margin-right: 22px;
+                text-align: center;
+                align-items: center;
+                margin-bottom: 10px;
+                justify-content: center;
+            }
+            a{
+                text-decoration: none;
+                color: #ffffff;
+            }
+            .row2{
+                background: #9f9f9f;
+                border-radius: 4px;
+                margin-left: 5px;
+                text-align: center;
+                float: right;
+                width: 100%;
+            }
+            .luachon{
+                text-align: center;
+                
+            }
+            
+            .dm2{
+                font-size: 100%;
+                padding: 0;
+                width: 250px;
+                height: 580px;
+                float: left;
+                margin-left: 60px;
+                background: #ffffff;
+                border-radius: 10px;
+            }
+            .danhmucli{
+                float: left;
+                list-style-type: none;
+                padding: 10px;
+                vertical-align: baseline;
+                box-sizing: border-box;
+                border-bottom: 1px solid black;
+                width: 100%;
+            }
+            .a1{
+                color: black;
+                
+            }
+            .row3{
+                max-width: 100%;
+                height: 580px;
+                
+            }
+            .box4{
+                float: left;
+                height: 377px;
+                width: 597px;
+                background: red;
+                margin: 5px;
+                border-radius: 10px;
+            }
+            .aiu{
+                border-radius: 10px;
+            }
+            .box5{
+                float: left;
+                width: 293px;
+                height: 193px;
+                
+                margin-top: 5px;
+            }
+            .box6{
+                float: left;
+                width: 293px;
+                height: 182px;
+                
+                margin-top: 5px;
+                margin-bottom: 4px;
+            }
+            .img2{
+                width: 290px;
+                height: 190px;
+                border-radius: 10px;
+            }
+            .img5{
+                width: 290px;
+                height: 180px;
+                border-radius: 10px;
+            }
+            .box7{
+                float: left;
+                width: 300px;
+                height: 135px;
+                
+            }
+            .box8{
+                float: left;
+                width: 300px;
+                height: 135px;
+            }
+            .box9{
+                float: left;
+                width: 300px;
+                height: 135px;
+                
+            }   
+            .ul1{
+                margin: 0;
+            }
+           
+            .img1{
+                width: 295px;
+                height: 150px;
+                border-radius: 10px;
+                margin-top: 10px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 10px;
+            }
+            .img4{
+                width: 295px;
+                height: 150px;
+                border-radius: 10px;
+                margin-top: 10px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 10px;
+            }
+            .img3{
+                width: 295px;
+                height: 150px;
+                border-radius: 10px;
+                margin-top: 10px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 10px;
+            }
+            .row4{
+                width: 100%;
+                height: 131px;
+                
+                margin-top: 20px;
+            }
+            .box10{
+                width: 1155px;
+                height: 100%;
+                margin-right: 35px;
+                margin-left: 50px;
+                
+            }
+            .img6{
+                height: 131px;
+                width: 280px;
+                padding: 2px;
+                border-radius: 10px;
+            }
+            .img7{
+                height: 131px;
+                width: 280px;
+                padding: 2px;
+                border-radius: 10px;
+            }
+            .img8{
+                height: 131px;
+                width: 280px;
+                padding: 2px;
+                border-radius: 10px;
+            }
+            .img9{
+                height: 131px;
+                width: 280px;
+                padding: 2px;
+                border-radius: 10px;
+            }
+            .asm{
+                background: #f4f8fa;
+            }
+            .pocily1{
+                padding-top: 35px;
+                padding-bottom: 35px;
+                height: 150px;
+                
+            }
+            .row6{
+                margin: 31px;
+                padding: 15px;
+            }
+            .row61{
+                padding: -15px;
+            }
+            .box15{
+                padding-left: 5px;
+                padding-right: 5px;
+                float: left;
+                height: 37px;
+                width: 250px;
+                padding: 15px;
+                
+            }
+            .box16{
+                padding-left: 5px;
+                padding-right: 5px;
+                float: left;
+                height: 37px;
+                width: 250px;
+                padding: 15px;
+                
+            }
+            .box17{
+                padding-left: 0px;
+                padding-right: 0px;
+                float: left;
+                height: 37px;
+                width: 250px;
+                padding: 15px;
+                
+            }
+            .box18{
+                padding-left: 5px;
+                padding-right: 5px;
+                float: left;
+                height: 37px;
+                width: 200px;
+                padding: 15px;
+                
+            }
+            .row5{
+                height: 300px;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-left: 31px;
+                margin-right: 31px;
+                
+            }
+            .box11{
+                float: left;
+                width: 150px;
+                height: 200px;
+                padding-left: 40px;
+                padding-right: 40px;
+                margin-bottom: 30px;
+                
+                
+            }
+            .box12{
+                float: left;
+                width: 150px;
+                height: 200px;
+                padding-left: 40px;
+                padding-right: 40px;
+                margin-bottom: 30px;
+                
+                
+            }
+            .box13{
+                float: left;
+                width: 150px;
+                height: 200px;
+                padding-left: 100px;
+                padding-right: 40px;
+                margin-bottom: 30px;
+                
+                
+            }
+            .box14{
+                float: left;
+                width: 150px;
+                height: 200px;
+                padding-left: 100px;
+                padding-right: 40px;
+                margin-bottom: 30px;
+                
+                
+            }
+            .a31{
+                float: left;
+                vertical-align: baseline;
+                color: black;
+                
+            }
+            .imgfooter{
+                width: auto;
+                max-height: 50px;
+            }
+            .box11 h5{
+                margin: 0 0 10px 0;
+                padding-bottom: 5px;
+                font-weight: bold;
+                line-height: 1.3;
+            }
+            .box12 h5{
+                margin: 0 0 10px 0;
+                padding-bottom: 5px;
+                font-weight: bold;
+                line-height: 1.3;
+            }
+            .box13 h5{
+                margin: 0 0 10px 0;
+                padding-bottom: 5px;
+                font-weight: bold;
+                line-height: 1.3;
+            }
+            .box14 h5{
+                margin: 0 0 10px 0;
+                padding-bottom: 5px;
+                font-weight: bold;
+                line-height: 1.3;
+            }
+            .row7{
+                margin-top: 20px;
+                width: 100%;
+                height: 341px;
+
+                margin-left: 30px;
+                margin-right: 30px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .row7 .blocktitle{
+                width: 1200px;
+                height: 45px;
+                margin-bottom: 20px;
+                background-color: #ffffff;
+            }
+            .row7 .blockcontent{
+                width: 1200px;
+                height: 276px;
+            }
+            .row7 .blocktitle h2{
+                font-weight: 600;
+                line-height: 26px;
+                display: flex;
+                align-items: center;
+                background: #e02027;
+                padding-left: 5px;
+                padding-right: 5px;
+                height: 100%;
+                position: relative;
+                margin: 0;
+                float: left;
+                border-radius: 4px 0 0 4px;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+            .row .blocktitle h2::after{
+                content: " ";
+                display: block;
+                width: 0;
+                height: 0;
+                margin-left: 2px;
+                vertical-align: middle;
+                border-top: 22px solid transparent;
+                border-left: 15px solid;
+                border-left-color: #e02027;
+                border-right: 0 solid transparent;
+                border-bottom: 23px solid transparent;
+                position: absolute;
+                top: 0;
+                right: -15px;
+            }
+            .tab-link{
+                margin-left: 499px;
+                height: 45px;
+                width: 302px;
+                float: right;
+            }
+            .tabs{
+                list-style-type: none;
+                display: flex;
+
+            }   
+            .tabs li a{
+                color: #333;
+            }
+            .tabs li{
+                padding-left: 3px;
+                padding-right: 3px;
+            }
+            .box20{
+                width: 182px;
+                height: 276px;
+                float: left;margin-right: 5px;
+                background-color: #ffffff;
+            }
+            .box21{
+                width: 182px;
+                height: 276px;
+                float: left;
+                padding-left: 5px;
+                padding-right: 5px;
+                margin-right: 5px;
+                margin-left: 5px;
+                background-color: #ffffff;
+            }
+            .box22{
+                width: 182px;
+                height: 276px;
+                float: left;
+                padding-left: 5px;
+                padding-right: 5px;
+                margin-right: 5px;
+                margin-left: 5px;
+                background-color: #ffffff;
+            }
+            .box23{
+                width: 182px;
+                height: 276px;
+                float: left;
+                padding-left: 5px;
+                padding-right: 5px;
+                margin-right: 5px;
+                margin-left: 5px;
+                background-color: #ffffff;
+            }
+            .box24{
+                width: 182px;
+                height: 276px;
+                float: left;
+                padding-right: 5px;
+                padding-left: 5px;
+                margin-right: 5px;
+                margin-left: 5px;
+                background-color: #ffffff;
+            }
+            .box25{
+                width: 182px;
+                height: 276px;
+                float: left;
+                padding-left: 5px;
+                padding-right: 5px;
+                margin-right: 5px;
+                margin-left: 5px;
+                background-color: #ffffff;
+            }
+            .box20 img{
+                height: 160px;
+                width: 160px;
+                margin-left: 14px;
+            }
+            .box21 img{
+                height: 160px;
+                width: 160px;
+                margin-left: 14px;
+            }
+            .box22 img{
+                height: 160px;
+                width: 160px;
+                margin-left: 14px;
+            }
+            .box23 img{
+                height: 160px;
+                width: 160px;
+                margin-left: 14px;
+            }
+            .box24 img{
+                height: 160px;
+                width: 160px;
+                margin-left: 14px;
+            }
+            .box25 img{
+                height: 160px;
+                width: 160px;
+                margin-left: 10px;
+            }
+            .tua1{
+                height: 60px;
+                width: 163px;
+            }
+            .tua1 a{
+                color: black;
+            }
+            .giatua1{
+                text-align: center;}
+            .tua2{
+                height: 60px;
+                width: 163px;
+            }
+            .tua2 a{
+                color: black;
+            }
+            .giatua2{
+                text-align: center;
+            }
+            .tua3{
+                height: 60px;
+                width: 163px;
+            }
+            .tua3 a{
+                color: black;
+            }
+            .giatua3{
+                text-align: center;
+            }
+            .tua4{
+                height: 60px;
+                width: 163px;
+            }
+            .tua4 a{
+                color: black;
+            }
+            .giatua4{
+                text-align: center;
+            }
+            .tua5{
+                height: 60px;
+                width: 163px;
+            }
+            .tua5 a{
+                color: black;
+            }
+            .giatua5{
+                text-align: center;
+            }
+            .tua6{
+                height: 60px;
+                width: 163px;
+            }
+            .tua6 a{
+                color: black;
+            }
+            .giatua6{
+                text-align: center;
+            }
+            .row8{
+                height: 354px;
+                width: 1263px;
+                margin-top: 20px;
+            }
+            .row8 .container{
+                width: 1167px;
+                height: 354px;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-left: 32px;
+            }
+            .row8 .container .wapper{
+                width: 1167px;
+                height: 354px;
+            }
+            .row8 .container .blocktitle{
+                width: 1190px;
+                height: 45px;
+                margin-bottom: 20px;
+                background-color: #ffffff;
+            }
+            .row8 .container .blockcontent{
+                width: 1190px;
+                height: 288px;
+                background-color: #ffffff;
+            }
+            .box26{
+                height: 288px;
+                width: 196px;
+                border-right: 1px solid #505050;
+                float: left;
+            }
+            .box27{
+                height: 288px;
+                width: 196px;
+                border-right: 1px solid #505050;
+                float: left;
+            }
+            .box28{
+                height: 288px;
+                width: 196px;
+                border-right: 1px solid #505050;
+                float: left;
+            }
+            .box29{
+                height: 288px;
+                width: 196px;
+                border-right: 1px solid #505050;
+                float: left;
+            }
+            .box30{
+                height: 288px;
+                width: 196px;
+                border-right: 1px solid #505050;
+                float: left;
+            }
+            .box31{
+                height: 288px;
+                width: 196px;
+                float: left;
+            }
+            .row8 .container .blocktitle h2{
+                width: 159px;
+                height: 45px;
+                background-color: #e02027;
+                color: #ffffff;
+                text-align: center;
+            }
+            .row8 .container .blocktitle .navBlock{
+                margin-left: 198px;
+                width: 784px;
+                height: 32px;
+                padding-bottom: 3px;
+                float: right;
+                margin-top: 15px;
+            }
+            .row8 .container .blocktitle .navBlock a{
+                padding: 5px 10px 0px 10px;
+                border: 0.5px solid black;
+                text-align: center;
+                border-radius: 10px;
+                color: black;
+            }
+            .box26 img{
+                height: 175px;
+                width: 175px;
+                text-align: center;
+                margin-left: 10px;
+            }
+            .box27 img{
+                height: 175px;
+                width: 175px;
+                text-align: center;
+                margin-left: 10px;
+            }
+            .box28 img{
+                height: 175px;
+                width: 175px;
+                text-align: center;
+                margin-left: 10px;
+            }
+            .box29 img{
+                height: 175px;
+                width: 175px;
+                text-align: center;
+                margin-left: 10px;
+            }
+            .box30 img{
+                height: 175px;
+                width: 175px;
+                text-align: center;
+                margin-left: 10px;
+            }
+            .box31 img{
+                height: 175px;
+                width: 175px;
+                text-align: center;
+                margin-left: 10px;
+            }
+            .tua7{
+                height: 60px;
+                width: 163px;
+            }
+            .tua7 a{
+                color: black;
+            }
+            .giatua7{
+                text-align: center;}
+            .row9{
+                height: 504px;
+                width: 1200px;
+                margin-top: 20px;
+            }
+            .row9 .container{
+                width: 1188px;
+                height: 504px;
+                margin-left: 50px;
+                padding: 0;
+            }
+            .row9 .container .wapper{
+                height: 504px;
+                width: 1190px;
+            }
+            .row9 .container .wapper .blocktitle{
+                width: 1188px;
+                height: 45px;
+                margin-bottom: 20px;
+                background-color: #ffffff;
+            }
+            .row9 .container .wapper .blocktitle h2{
+                width: 186px;
+                height: 36px;
+                padding: 5px 8px 4px 12px;
+                background-color: #e02027;
+                color: white;
+            }
+            .row9 .container .wapper .blocktitle .nav{
+                width: 342px;
+                height: 32px;
+                float: left;
+                float: right;
+                margin-top: 10px;
+            }
+            .row9 .container .wapper .blocktitle .nav a{
+                color: #333;
+                padding-left: 0px;
+                padding-right: 5px;
+                margin-left: 10px;
+                margin-right: 10px;
+                border: 1px solid #333;
+                border-radius: 10px;
+                text-align: center;
+                padding: 3px;
+            }
+            .row9 .container .wapper .banner{
+                width: 100%;
+                height: 130px;
+                margin-bottom: 20px;
+            }
+            .row9 .container .wapper .banner img{
+                width: 1170px;
+                height: 131px;
+            }
+            .row9 .container .wapper .hinh{
+                width: 100%;
+                height: 288px;
+                background-color: white;
+            }
+            .box32{
+                width: 174px;
+                height: 268px;
+                padding: 10px;
+                border-right: #333 1px solid;
+                float: left;
+            }
+            .box32 img{
+                height: 174px;
+                width: 174px;
+            }
+            .tua8{
+                height: 60px;
+                width: 163px;
+            }
+            .tua8 a{
+                color: black;
+            }
+            .giatua8{
+                text-align: center;}
+                .row10 .container .wapper .blocktitle{
+                width: 1188px;
+                height: 45px;
+                margin-bottom: 20px;
+                background-color: #ffffff;
+            }
+            .row10 .container .wapper .blocktitle h2{
+                width: 240px;
+                height: 45px;
+                padding: 10px 8px 0px 12px;
+                background-color: #e02027;
+                color: white;
+                text-align: center;
+            }
+            .row10 .container .wapper .blocktitle .nav{
+                width: 670px;
+                height: 33px;
+                float: right;
+                margin-left: 220px;
+                margin-top: 20px;
+            }
+            .row10 .container .wapper .blocktitle .nav a{
+                margin-right: 10px;
+                border: #333 1px solid;
+                border-radius: 10px;
+                color: #333;
+                padding: 4px;
+            }
+
+        .row10{
+            height: 504px;
+            width: 1200px;
+            margin-top: 20px;
+        }
+        .row10 .container{
+            width: 1188px;
+            height: 504px;
+            margin-left: 50px;
+            padding: 0;
+        }
+        .row10 .container .wapper{
+            height: 504px;
+            width: 1190px;
+        }
+        
+        .row10 .container .wapper .banner{
+            width: 100%;
+            height: 130px;
+            margin-bottom: 20px;
+        }
+        .row10 .container .wapper .banner img{
+            width: 1170px;
+            height: 131px;
+        }
+        .row10 .container .wapper .hinh{
+            width: 100%;
+            height: 288px;
+            background-color: white;
+        }
+        .box33{
+            width: 174px;
+            height: 268px;
+            padding: 10px;
+            border-right: #333 1px solid;
+            float: left;
+        }
+        .box33 img{
+            height: 174px;
+            width: 174px;
+        }
+        .tua9{
+            height: 60px;
+            width: 163px;
+        }
+        .tua9 a{
+            color: black;
+        }
+        .giatua9{
+            text-align: center;}
+            .row11 .container .wapper .blocktitle{
+                width: 1188px;
+                height: 45px;
+                margin-bottom: 20px;
+                background-color: #ffffff;
+            }
+            .row11 .container .wapper .blocktitle h2{
+                width: 250px;
+                height: 45px;
+                padding: 0px 4px 0px 12px;
+                background-color: #e02027;
+                color: white;
+                text-align: center;
+            }
+            .row11 .container .wapper .blocktitle .nav{
+                width: 670px;
+                height: 33px;
+                float: right;
+                margin-left: 220px;
+                margin-top: 20px;
+            }
+            .row11 .container .wapper .blocktitle .nav a{
+                margin-right: 10px;
+                border: #333 1px solid;
+                border-radius: 10px;
+                color: #333;
+                padding: 3px;
+            }
+
+        .row11{
+            height: 354px;
+            width: 1200px;
+            margin-top: 20px;
+        }
+        .row11 .container{
+            width: 1188px;
+            height: 354px;
+            margin-left: 50px;
+            padding: 0;
+        }
+        
+        .row11 .container .wapper .banner{
+            width: 100%;
+            height: 130px;
+            margin-bottom: 20px;
+        }
+        .row11 .container .wapper .banner img{
+            width: 1170px;
+            height: 131px;
+        }
+        .row11 .container .wapper .hinh{
+            width: 100%;
+            height: 288px;
+            background-color: white;
+        }
+        .box34{
+            width: 174px;
+            height: 268px;
+            padding: 10px;
+            border-right: #333 1px solid;
+            float: left;
+        }
+        .box34 img{
+            height: 174px;
+            width: 174px;
+        }
+        .tua10{
+            height: 60px;
+            width: 163px;
+        }
+        .tua10 a{
+            color: black;
+        }
+        .giatua10{
+            text-align: center;}
+        </style>
+    </head>
+    <body> <div class="asm">
+        <header id="header">
+            <div class="topbar">
+                <img src="img/1.webp" alt="">
+            </div>
+            <div id="headerpage">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="headerlogo">
+                            <img src="img/logosao.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="danhmuc">
+                        <div class="row1">
+                            <div class="box1">
+                                <i class="fa fa-bars"></i>
+                                <span>DANH MỤC SẢN PHẨM</span>
+                            </div>
+                        </div>
+                        <div class="row2">
+                            <div class="menu">
+                                <ul class="luachon">
+                                    <li class="a2"><a href="#">Lắp đặt phòng net</a></li>
+                                    <li class="a2"><a href="#">Trả góp</a></li>
+                                    <li class="a2"><a href="#">Bảng giá</a></li>
+                                    <li class="a2"><a href="#">Xây dựng cấu hình</a></li>
+                                    <li class="a2"><a href="#">Kiếm tra bảo hành</a></li>
+                                    <li class="a2"><a href="#">Thiết bị mining</a></li>
+                                </ul>                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="row3">
+            <div class="dm2">
+                <ul class="ul1">
+                    <li class="danhmucli"> <a class="a1" href="#">Linh kiện mới</a></li>
+                    <li class="danhmucli"> <a class="a1" href="#">Linh kiện cũ</a></li>
+                    <li class="danhmucli"> <a class="a1" href="#">Laptop chính hãng</a></li>
+                    <li class="danhmucli"> <a class="a1" href="#">PC Gamming,Đồ họa,Audio</a></li>
+                    <li class="danhmucli"> <a class="a1" href="#">PC Văn Phòng,Mini PC,AiO</a></li>
+                    <li class="danhmucli"> <a class="a1" href="#">Màn hình máy tính</a></li>
+                    <li class="danhmucli"> <a class="a1" href="#">Phụ kiện</a></li>
+                    <li class="danhmucli"> <a class="a1" href="#">Bàn,Ghế Gamming</a></li>
+                    <li class="danhmucli"> <a class="a1" href="#">Phím,Chuột,Tai nghe</a></li>
+                    <li class="danhmucli"> <a class="a1" href="#">Thiết bị mạng</a></li>
+                    <li class="danhmucli"> <a class="a1" href="#">Thiết Bị Âm Thanh</a></li>
+                    <li class="danhmucli"> <a class="a1" href="#">Phần mềm</a></li>
+                    <li class="danhmucli"> <a class="a1" href="#">Camera,Thiết bị quan sát</a></li>
+                    <li class="danhmucli"> <a class="a1" href="#">Máy in,mực in</a></li>
+                    <li class="danhmucli"> <a class="a1" href="#">Tản nhiệt PC</a></li>
+                </ul>
+            </div>
+            <div class="box4">
+                <img class="aiu" src="img/qc1.webp" alt="">
+            </div> 
+            <div class="box5">
+                <img class="img2" src="img/banner_right_2.webp" alt="">
+            </div>
+            <div class="box6">
+                <img class="img5" src="img/banner_right_5.webp" alt="">
+            </div>
+            <div class="box7">
+                <img class="img1" src="img/banner_right_3.webp" alt="">
+            </div>
+            <div class="box8">
+                <img class="img4" src="img/banner_right_4.webp" alt="">
+            </div>
+            <div class="box9">
+                <img class="img3" src="img/banner_right_5 (1).webp" alt="">
+            </div>
+         </div>
+        <div class="row4">
+            <div class="box10">
+                <img class="img6" src="img/banner_home_1_large.webp" alt="">
+                <img class="img7" src="img/banner_home_2_large.webp" alt="">
+                <img class="img8" src="img/banner_home_3_large.webp" alt="">
+                <img class="img9" src="img/banner_home_4_large.webp" alt="">
+            </div>
+        </div>
+        <div class="row7">
+            <div class="blocktitle">
+                <h2>TOP BÁN CHẠY TRONG TUẦN</h2>
+                <div class="tab-link">
+                    <ul class="tabs">
+                        <li> <a href="#">Top bán chạy</a></li>
+                        <li> <a href="#">VGA</a></li>
+                        <li> <a href="#">CPU</a></li>
+                        <li> <a href="#">RAM</a></li>
+                        <li> <a href="#">SSD</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="blockcontent">
+                <div class="tab-content">
+                    <div class="box20">
+                        <img src="img/cpu_i3-12100f_tray-600x600_fdad11f961ce4ac0a178a62df5d0be03_large.webp" alt="">
+                        <div class="tua1">
+                            <a href="#">CPU Intel Core i3 12100F TRAY (3.30 Up to </a>
+                        </div>
+                        <div class="giatua1">
+                            <h3>2,500,000</h3>
+                        </div>
+                    </div>
+                    <div class="box21">
+                        <img src="img/hinh1.webp" alt="">
+                        <div class="tua2">
+                            <a href="#">Ram DDR4 Kingston 8G/3200 Fury Beast (1x 8GB) (KF432C16BB/8)</a>
+                        </div>
+                        <div class="giatua2">
+                            <h3>2,500,000</h3>
+                        </div>
+                    </div>
+                    <div class="box22">
+                        <img src="img/hinh2.webp" alt="">
+                        <div class="tua3">
+                            <a href="#">Ổ cứng SSD 256G Patriot P300 M.2 NVMe PCIe Gen3x4 (P300P256GM28)</a>
+                        </div>
+                        <div class="giatua3">
+                            <h3>2,500,000</h3>
+                        </div>
+                    </div>
+                    <div class="box23">
+                        <img src="img/hinh3.webp" alt="">
+                        <div class="tua4">
+                            <a href="#">CPU Intel Core i3 12100F Box Chính Hãng</a>
+                        </div>
+                        <div class="giatua4">
+                            <h3>2,500,000</h3>
+                        </div>
+                    </div>
+                    <div class="box24">
+                        <img src="img/hinh4.webp" alt="">
+                        <div class="tua5">
+                            <a href="#">VGA Asus Gaming TUF OC 1660 Super 6G 2 Fan</a>
+                        </div>
+                        <div class="giatua5">
+                            <h3>2,500,000</h3>
+                        </div>
+                    </div>
+                    <div class="box25">
+                        <img src="img/m.webp" alt="">
+                        <div class="tua6">
+                            <a href="#">Mainboard Asus H610M-K Prime DDR4</a>
+                        </div>
+                        <div class="giatua6">
+                            <h3>2,500,000</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row8">
+            <div class="container">
+                <div class="wapper">
+                    <div class="blocktitle">
+                        <div class="navBlock">
+                            <a href="#">Cấu hình Grandma Shank</a>
+                            <a href="#">Cấu hình Mommy Shank</a>
+                            <a href="#">Cấu hình Daddy Shank</a>
+                            <a href="#">PC giả lập NOX</a>
+                            <a href="#">Xem tất cả</a>
+                        </div>
+                        <h2>PC Gaming</h2>
+                    </div>
+                    <div class="blockcontent">
+                        <div class="box26">
+                            <img src="img/baby_1660s_d3fa11c3aa5845fcbed9df78c4ca7dec_large.webp" alt="">
+                            <div class="tua7"><a href="#">
+                                Cấu hình Gaming Baby 2060S I3
+                            </a></div>
+                            <div class="giatua7"><h3>10,000,000</h3></div>
+                        </div>
+                        <div class="box27">
+                            <img src="img/baby_1660s_d3fa11c3aa5845fcbed9df78c4ca7dec_large.webp" alt="">
+                            <div class="tua7"><a href="#">
+                                Cấu hình Gaming Baby 2060S I3
+                            </a></div>
+                            <div class="giatua7"><h3>10,000,000</h3></div>
+                        </div>
+                        <div class="box28">
+                            <img src="img/baby_1660s_d3fa11c3aa5845fcbed9df78c4ca7dec_large.webp" alt="">
+                            <div class="tua7"><a href="#">
+                                Cấu hình Gaming Baby 2060S I3
+                            </a></div>
+                            <div class="giatua7"><h3>10,000,000</h3></div>
+                        </div>
+                        <div class="box29">
+                            <img src="img/baby_1660s_d3fa11c3aa5845fcbed9df78c4ca7dec_large.webp" alt="">
+                            <div class="tua7"><a href="#">
+                                Cấu hình Gaming Baby 2060S I3
+                            </a></div>
+                            <div class="giatua7"><h3>10,000,000</h3></div>
+                        </div>
+                        <div class="box30">
+                            <img src="img/baby_1660s_d3fa11c3aa5845fcbed9df78c4ca7dec_large.webp" alt="">
+                            <div class="tua7"><a href="#">
+                                Cấu hình Gaming Baby 2060S I3
+                            </a></div>
+                            <div class="giatua7"><h3>10,000,000</h3></div>
+                        </div>
+                        <div class="box31">
+                            <img src="img/ch21.webp" alt="">
+                            <div class="tua7"><a href="#">
+                                Cấu hình Gaming Baby 2060S I3
+                            </a></div>
+                            <div class="giatua7"><h3>10,000,000</h3></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row9">
+            <div class="container">
+                <div class="wapper">
+                    <div class="blocktitle">
+                        <div class="nav">
+                            <a href="#">Máy bộ để bàn</a>
+                            <a href="#">Máy bộ Mini</a>
+                            <a href="#">Xem tất cả</a>
+                        </div>
+                        <h2>PC văn phòng</h2>
+                    </div>
+                    <div class="blockcontent">
+                        <div class="banner">
+                            <img src="img/pcvanphong.webp" alt="">
+                        </div>
+                        <div class="hinh">
+                            <div class="box32">
+                                <img src="img/star-vp-05-600x600_297d2792191e44c6a6b7151b83c263f8_large.webp" alt="">
+                                <div class="tua8">
+                                    <a href="#">Cấu Hình Văn Phòng STAR_VP05</a>
+                                </div>
+                                <div class="giatua8">
+                                    <h3>5,000,000</h3>
+                                </div>
+                            </div>
+                            <div class="box32">
+                                <img src="img/ch1.webp" alt="">
+                                <div class="tua8">
+                                    <a href="#">Cấu Hình Văn Phòng STAR_VP05</a>
+                                </div>
+                                <div class="giatua8">
+                                    <h3>5,000,000</h3>
+                                </div>
+                            </div>
+                            <div class="box32">
+                                <img src="img/ch1.webp" alt="">
+                                <div class="tua8">
+                                    <a href="#">Cấu Hình Văn Phòng STAR_VP05</a>
+                                </div>
+                                <div class="giatua8">
+                                    <h3>5,000,000</h3>
+                                </div>
+                            </div>
+                            <div class="box32">
+                                <img src="img/star-vp-05-600x600_297d2792191e44c6a6b7151b83c263f8_large.webp" alt="">
+                                <div class="tua8">
+                                    <a href="#">Cấu Hình Văn Phòng STAR_VP05</a>
+                                </div>
+                                <div class="giatua8">
+                                    <h3>5,000,000</h3>
+                                </div>
+                            </div>
+                            <div class="box32">
+                                <img src="img/star-vp-05-600x600_297d2792191e44c6a6b7151b83c263f8_large.webp" alt="">
+                                <div class="tua8">
+                                    <a href="#">Cấu Hình Văn Phòng STAR_VP05</a>
+                                </div>
+                                <div class="giatua8">
+                                    <h3>5,000,000</h3>
+                                </div>
+                            </div>
+                            <div class="box32">
+                                <img src="img/star-vp-05-600x600_297d2792191e44c6a6b7151b83c263f8_large.webp" alt="">
+                                <div class="tua8">
+                                    <a href="#">Cấu Hình Văn Phòng STAR_VP05</a>
+                                </div>
+                                <div class="giatua8">
+                                    <h3>5,000,000</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row10">
+            <div class="container">
+                <div class="wapper">
+                    <div class="blocktitle">
+                        <div class="nav">
+                            <a href="#">Laptop Lenovo</a>
+                            <a href="#">Laptop Acer</a>
+                            <a href="#">Laptop Gigabyte</a>
+                            <a href="#">Laptop Dell</a>
+                            <a href="#">Laptop Asus</a>
+                            <a href="#">Xem tất cả</a>
+                        </div>
+                        <h2>LAPTOP GAMMING</h2>
+                    </div>
+                    <div class="blockcontent">
+                        <div class="banner">
+                            <img src="img/banner_product_home_3.webp" alt="">
+                        </div>
+                        <div class="hinh">
+                            <div class="box33">
+                                <img src="img/pc2.webp" alt="">
+                                <div class="tua9">
+                                    <a href="#">Laptop Acer Nitro 5 Gaming AN515 57 54MV NH.QEN...</a>
+                                </div>
+                                <div class="giatua9">
+                                    <h3>15,000,000</h3>
+                                </div>
+                            </div>
+                            <div class="box33">
+                                <img src="img/gm1.webp" alt="">
+                                <div class="tua9">
+                                    <a href="#">Laptop Acer Nitro 5 Gaming AN515 57 54MV NH.QEN...</a>
+                                </div>
+                                <div class="giatua9">
+                                    <h3>15,000,000</h3>
+                                </div>
+                            </div>
+                            <div class="box33">
+                                <img src="img/gm2.webp" alt="">
+                                <div class="tua9">
+                                    <a href="#">Laptop Acer Nitro 5 Gaming AN515 57 54MV NH.QEN...</a>
+                                </div>
+                                <div class="giatua9">
+                                    <h3>15,000,000</h3>
+                                </div>
+                            </div>
+                            <div class="box33">
+                                <img src="img/gm3.webp" alt="">
+                                <div class="tua9">
+                                    <a href="#">Laptop Acer Nitro 5 Gaming AN515 57 54MV NH.QEN...</a>
+                                </div>
+                                <div class="giatua9">
+                                    <h3>15,000,000</h3>
+                                </div>
+                            </div>
+                            <div class="box33">
+                                <img src="img/gm4.webp" alt="">
+                                <div class="tua9">
+                                    <a href="#">Laptop Acer Nitro 5 Gaming AN515 57 54MV NH.QEN...</a>
+                                </div>
+                                <div class="giatua9">
+                                    <h3>15,000,000</h3>
+                                </div>
+                            </div>
+                            <div class="box33">
+                                <img src="img/gm5.webp" alt="">
+                                <div class="tua9">
+                                    <a href="#">Laptop Acer Nitro 5 Gaming AN515 57 54MV NH.QEN...</a>
+                                </div>
+                                <div class="giatua9">
+                                    <h3>15,000,000</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row11">
+            <div class="container">
+                <div class="wapper">
+                    <div class="blocktitle">
+                        <div class="nav">
+                            <a href="#">Laptop Lenovo</a>
+                            <a href="#">Laptop Acer</a>
+                            <a href="#">Laptop HP</a>
+                            <a href="#">Laptop Dell</a>
+                            <a href="#">Laptop Asus</a>
+                            <a href="#">Xem tất cả</a>
+                        </div>
+                        <h2>LAPTOP VĂN PHÒNG</h2>
+                    </div>
+                    <div class="blockcontent">
+                        <div class="hinh">
+                            <div class="box34">
+                                <img src="img/vp1.webp" alt="">
+                                <div class="tua10">
+                                    <a href="#">Laptop MSI Modern 14 B11MOU 1033VN i7...</a>
+                                </div>
+                                <div class="giatua10">
+                                    <h3>13,999,000</h3>
+                                </div>
+                            </div>
+                            <div class="hinh">
+                                <div class="box34">
+                                    <img src="img/vp2.webp" alt="">
+                                    <div class="tua10">
+                                        <a href="#">Laptop MSI Modern 14 B11MOU 1033VN i7...</a>
+                                    </div>
+                                    <div class="giatua10">
+                                        <h3>13,999,000</h3>
+                                    </div>
+                                </div>
+                                <div class="hinh">
+                                    <div class="box34">
+                                        <img src="img/vp3.webp" alt="">
+                                        <div class="tua10">
+                                            <a href="#">Laptop MSI Modern 14 B11MOU 1033VN i7...</a>
+                                        </div>
+                                        <div class="giatua10">
+                                            <h3>13,999,000</h3>
+                                        </div>
+                                    </div>
+                                    <div class="hinh">
+                                        <div class="box34">
+                                            <img src="img/vp4.webp" alt="">
+                                            <div class="tua10">
+                                                <a href="#">Laptop MSI Modern 14 B11MOU 1033VN i7...</a>
+                                            </div>
+                                            <div class="giatua10">
+                                                <h3>13,999,000</h3>
+                                            </div>
+                                        </div>
+                                        <div class="hinh">
+                                            <div class="box34">
+                                                <img src="img/vp5.webp" alt="">
+                                                <div class="tua10">
+                                                    <a href="#">Laptop MSI Modern 14 B11MOU 1033VN i7...</a>
+                                                </div>
+                                                <div class="giatua10">
+                                                    <h3>13,999,000</h3>
+                                                </div>
+                                            </div>
+                                            <div class="hinh">
+                                                <div class="box34">
+                                                    <img src="img/vp6.webp" alt="">
+                                                    <div class="tua10">
+                                                        <a href="#">Laptop MSI Modern 14 B11MOU 1033VN i7...</a>
+                                                    </div>
+                                                    <div class="giatua10">
+                                                        <h3>13,999,000</h3>
+                                                    </div>
+                                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pocily1">
+            <div class="row6">
+                <div class="row61">
+                    <div class="box15">
+                        <h5>CHÍNH SÁCH GIAO HÀNG</h5>
+                        <p>Nhận hàng và thanh toán tại nhà</p>
+                    </div>
+                    <div class="box16">
+                        <h5>ĐỔI TRẢ DỄ DÀNG</h5>
+                        <p>1 đổi 1 trong 7 ngày</p>
+                    </div>
+                    <div class="box17"><h5>THANH TOÁN TIỆN LỢI</h5>
+                        <p>Trả tiền mặt,Chuyển khoản,Trả góp 0%</p>
+                    </div>
+                    <div class="box18"><h5>HỖ TRỢ NHIỆT TÌNH</h5>
+                    <p>Tư vấn,giải đáp mọi thắc mắc</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="row5">
+            <div class="box11">
+                <h5>GIỚI THIỆU THNS</h5>
+                <a class="a31" href="#">Về chúng tôi</a>
+                <a class="a31" href="#">Tư vấn mua hàng</a>
+                <a class="a31" href="#">Tuyển dụng</a>
+            </div>
+            <div class="box12">
+                <h5>CHÍNH SÁCH CHUNG</h5>
+                <a class="a31" href="#">Chính sách trả góp</a>
+                <a class="a31" href="#">Chính sách bảo mật</a>
+                <a class="a31" href="#">Chính sách giải quyết khiếu nại</a>
+                <a class="a31" href="#">Chính sách bảo vệ thông tin cá nhân</a>
+                <a class="a31" href="#">Chính sách bảo hành</a>
+                <a class="a31" href="#">Chính sách đổi - trả hàng</a>
+            </div>
+            <div class="box13">
+                <h5>THÔNG TIN KHUYẾN MÃI</h5>
+                <a class="a31" href="#">Tổng hợp khuyến mãi</a>
+                <a class="a31" href="#">VGA giảm sâu</a>
+            </div>
+            <div class="box14">
+                <h5>HỖ TRỢ NHIỆT TÌNH</h5>
+                <a class="a31" href="#">Tổng hợp hotlie CSKH,phản ánh </a>
+                <a class="a31" href="#">Thông tin thanh toán</a>
+                <a class="a31" href="#">Lắp đặt phòng net</a>
+                <a class="a31" href="#">Thiết bị Mining</a>
+            </div>
+            <div class="box15">
+                <img class="imgfooter" src="img/banner_1_footer_medium.webp" alt="">
+            </div>
+        </div>   
+    </div>  
+    </body>
+
+</html>
